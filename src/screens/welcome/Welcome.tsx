@@ -2,10 +2,9 @@ import { ParamListBase, useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import React from 'react';
 import { View, Text, Image, ImageSourcePropType, ImageStyle, StyleSheet, Dimensions } from 'react-native';
-import WelcomeImage from './Welocme.png';
-const WELCOME_IMAGE = Image.resolveAssetSource(WelcomeImage).uri;
 
-const WelcomeScreen = () => {
+
+const Welcome = () => {
     const navigation = useNavigation<NativeStackNavigationProp<ParamListBase>>();
     React.useEffect(() => {
         const timer = setTimeout(() => {
@@ -17,7 +16,7 @@ const WelcomeScreen = () => {
 
     return (
         <View style={styles.container}>
-            <Image source={{ uri: WELCOME_IMAGE }} style={styles.image} />
+            <Image source={require('./Welcome.jpg')} style={styles.image} />
             <View style={styles.textContainer}>
                 <Text style={styles.text}>Добро пожаловать в приложение</Text>
             </View>
@@ -45,4 +44,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default WelcomeScreen;
+export default Welcome;

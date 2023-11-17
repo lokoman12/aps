@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-const HomeScreen = () => {
+const СourseScreen = () => {
   const [exchangeRatesUsd, setExchangeRatesUsd] = useState<{ [key: string]: number }>({});
   const [exchangeRatesEur, setExchangeRatesEur] = useState<{ [key: string]: number }>({});
   const [date, setDate] = useState('');
@@ -84,4 +84,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default HomeScreen;
+export default СourseScreen;
